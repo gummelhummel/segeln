@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { SectionComponent } from './section/section.component';
 import { TextComponent } from './text/text.component';
 import { PictureComponent } from './picture/picture.component';
-import { TemplateHostDirective } from './template-host.directive';
+import { TemplateHostDirective } from './section/template-host.directive';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
     BrowserModule
   ],
   providers: [],
-  entryComponents: [SlideShowComponent],
+  entryComponents: [SlideShowComponent, TextComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

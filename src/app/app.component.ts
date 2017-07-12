@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SlideShowComponent } from './slide-show/slide-show.component';
 
 @Component({
   selector: 'app-root',
@@ -9,30 +8,35 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 export class AppComponent {
   sectionData = ["red", "green", "blue", "yellow"];
 
-  get Type(){
-    return SlideShowComponent;
-  }
-
   data = [
     {
       type: 'SlideShowComponent',
       data: {
-        images: ['red', 'blue', 'green']
+        images: ['red'],
+        height: '150vh'
       }
 
     },
     {
-      type: 'picture',
-      data: {
-        url: 'google.de'
-      }
-
-    },
-    {
-      type: 'text',
+      type: 'TextComponent',
       data: {
         text: 'bla bla bla'
       }
+    },
+    {
+      type: 'SlideShowComponent',
+      data: {
+        images: ['green'],
+        height: '80vh'
+      }
+
+    },
+    {
+      type: 'SlideShowComponent',
+      data: {
+        images: ['blue']
+      }
+
     }
   ]
 }

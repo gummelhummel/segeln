@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Sectionable } from '../section/sectionable';
 
 @Component({
   selector: 'app-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class TextComponent implements OnInit {
+export class TextComponent implements Sectionable {
+
+  data;
 
   constructor() { }
 
-  ngOnInit() {
+  setData(data){
+    this.data = data;
   }
 
 }
