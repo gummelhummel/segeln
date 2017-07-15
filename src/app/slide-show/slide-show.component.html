@@ -1,3 +1,11 @@
-<div [style.height]="data.height" [style.backgroundColor]="data.images[0]">
-
+<div [style.height]="data.height" style="border: 1px solid red;" >
+    <carousel >
+        <slide *ngFor="let slide of data.slides">
+            <img [src]="slide.image" [style.maxHeight]="data.height" style="height: 100%; width: 100%; object-fit: contain;">
+            <div class="carousel-caption">
+                <h3>{{slide.title}}</h3>
+                <p>{{slide.text}}</p>
+            </div>
+        </slide>
+    </carousel>
 </div>
